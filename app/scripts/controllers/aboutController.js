@@ -8,10 +8,6 @@
  * Controller of the intelMdDemoApp
  */
 angular.module('intelMdDemoApp')
-  .controller('AboutCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('AboutController', function () {
+
   });

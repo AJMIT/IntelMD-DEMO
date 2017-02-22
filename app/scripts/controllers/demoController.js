@@ -8,10 +8,8 @@
  * Controller of the intelMdDemoApp
  */
 angular.module('intelMdDemoApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('DemoCtrl', function () {
+    $scope.login = function (email, password) {
+
+    }
   });
