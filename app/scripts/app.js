@@ -8,6 +8,17 @@
  *
  * Main module of the application.
  */
+
+// Initialize the Firebase SDK
+var config = {
+  apiKey: "AIzaSyDQuXjehq0hypKMSxc4s9MwBAMjgqSnw6k",
+  authDomain: "intelmd-demo.firebaseapp.com",
+  databaseURL: "https://intelmd-demo.firebaseio.com",
+  storageBucket: "intelmd-demo.appspot.com",
+  messagingSenderId: "470765854436"
+};
+firebase.initializeApp(config);
+
 angular
   .module('intelMdDemoApp', [
     'Services',
@@ -17,7 +28,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'firebase'
   ])
   .config(function ($routeProvider) {
     $routeProvider

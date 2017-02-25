@@ -1,5 +1,6 @@
 angular.module('Services')
-.factory('APIService', function($http, $rootScope) {
+.factory('APIService', function($http, $rootScope, $firebaseObject) {
+	var ref = firebase.database().ref();
 	var api = {}
 	var domain = config.DOMAIN;
 	var requestServer = function (method, url, params, data) {
@@ -18,8 +19,8 @@ angular.module('Services')
 		params.password = password; //CryptoJS.SHA512(password).toString();
 		return requestServer('POST', url, params, {});
 	}
-	
-	api.generateNewObject = function(obj) {
+
+ 	api.generateNewObject = function(obj) {
 		var objClass = obj.getClass();
 		var url = objClass.url+'/new';
 		return requestServer('GET', url, {}, {})
