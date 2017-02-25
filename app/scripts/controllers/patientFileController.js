@@ -8,7 +8,7 @@
  * Controller of the intelMdDemoApp
  */
 angular.module('intelMdDemoApp')
-  .controller('PatienFileController', function () {
+  .controller('PatientFileController', function () {
 
     $scope.addTreatment = function(patien) {
         //TODO: Move To Create Generate Treatment

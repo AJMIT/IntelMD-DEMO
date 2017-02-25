@@ -8,7 +8,7 @@
  * Controller of the intelMdDemoApp
  */
 angular.module('intelMdDemoApp')
-  .controller('DemoCtrl', function () {
+  .controller('DemoController', function ($scope) {
     $scope.login = function (email, password) {
 
     }
