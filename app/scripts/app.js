@@ -10,6 +10,8 @@
  */
 angular
   .module('intelMdDemoApp', [
+    'Services',
+    'Controllers',
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -21,15 +23,18 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/demo.html',
-        controller: 'DemoCtrl',
+        controller: 'DemoController',
         controllerAs: 'demo'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
+        controller: 'AboutController',
         controllerAs: 'about'
       })
       .otherwise({
         redirectTo: '/'
       });
   });
+  angular.module('Models', ['Services'])
+  angular.module('Services', []);
+  angular.module('Controllers', ['Models'])
